@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JESTER</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           
+        
+        }
+        header{
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo{
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        .menu{
+            display: flex;
+            list-style: none;
+            color: white;
+        }
+        .menu li{
+            margin-right: 15px;
+        }
+        .menu li a{
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }.menu li ul{
+            display: none;
+            position: absolute;
+            width: 130px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #555;
+            margin-top: 10px;
+        }
+        .menu li ul li{
+            margin: 30px 20px;
+            list-style: none;
+        }
+        .menu li ul li a:hover{
+            background-color: #333;
+        }
+        .menu li a:hover{
+            background-color: #555;
+            transition: 0.5s;
+        }
+        #dropdown:hover ul{
+            display: block;
+        }
+        .search-bar{
+            background-color: #444;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+        }
+        .search-bar input[type="text"]{
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            color: white;
+            margin-right: 5px;
+        }
+        .search-bar input[type="button"]{
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo">JESTER</a>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li id="dropdown">
+                    <a href="/">Courses</a>
+                    <ul>
+                        <li><a href="/">Year 1</a></li>
+                        <li><a href="/">Year 2</a></li>
+                        <li><a href="/">Year 3</a></li>
+                        <li><a href="/">Year 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <input type="button" value="Search">
+            </div>
+        </header>
+    </div>
+</body>
+</html>
